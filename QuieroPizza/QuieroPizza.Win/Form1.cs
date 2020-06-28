@@ -25,7 +25,7 @@ namespace QuieroPizza.Win
 
             foreach (var producto in listaddeProductos)
             {
-                MessageBox.Show(producto.Descripcion);
+                MessageBox.Show(producto.Descripcion + " " + producto.Precio);
             }
         }
     }
