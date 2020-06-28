@@ -11,22 +11,16 @@ using System.Windows.Forms;
 
 namespace QuieroPizza.Win
 {
-    public partial class Form1 : Form
+    public partial class frmProductos : Form
     {
-        public Form1()
+        Contexto _contexto;
+        public frmProductos()
         {
+            _contexto = new Contexto();
             InitializeComponent();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
             var productosBL = new ProductosBL();
-            var listaddeProductos = productosBL.ObtenerProductos();
-
-            foreach (var producto in listaddeProductos)
-            {
-                MessageBox.Show(producto.Descripcion + " " + producto.Precio);
-            }
+            productoBindingSource.DataSource = productosBL.ObtenerProductos(); 
         }
     }
 }
