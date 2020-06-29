@@ -11,16 +11,15 @@ using System.Windows.Forms;
 
 namespace QuieroPizza.Win
 {
-    public partial class frmProductos : Form
+    public partial class frm_productos : Form
     {
-        Contexto _contexto;
-        public frmProductos()
+        public frm_productos()
         {
-            _contexto = new Contexto();
             InitializeComponent();
-
             var productosBL = new ProductosBL();
-            productoBindingSource.DataSource = productosBL.ObtenerProductos(); 
+            var listadeProductos = productosBL.ObtenerProductos();
+
+            listadeProductosBindingSource.DataSource = listadeProductos;
         }
     }
 }

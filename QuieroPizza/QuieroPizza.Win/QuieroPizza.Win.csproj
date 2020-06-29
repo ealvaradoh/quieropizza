@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{642F151F-4D0D-4988-B733-D19678CDF63A}</ProjectGuid>
+    <ProjectGuid>{2B2DC279-0F8A-4345-BE23-1B0E591D0FA3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>QuieroPizza.Win</RootNamespace>
@@ -55,16 +55,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmProductos.cs">
+    <Compile Include="frm_productos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmProductos.Designer.cs">
-      <DependentUpon>frmProductos.cs</DependentUpon>
+    <Compile Include="frm_productos.Designer.cs">
+      <DependentUpon>frm_productos.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmProductos.resx">
-      <DependentUpon>frmProductos.cs</DependentUpon>
+    <EmbeddedResource Include="frm_productos.resx">
+      <DependentUpon>frm_productos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -76,8 +76,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
-    <None Include="Properties\DataSources\QuieroPizza.BL.Contexto.datasource" />
-    <None Include="Properties\DataSources\QuieroPizza.BL.Producto.datasource" />
     <None Include="Properties\DataSources\QuieroPizza.BL.ProductosBL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

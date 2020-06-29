@@ -1,6 +1,6 @@
 ﻿namespace QuieroPizza.Win
 {
-    partial class frmProductos
+    partial class frm_productos
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,43 +29,43 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProductos));
-            this.productoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_productos));
+            this.listadeProductosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listadeProductosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.productoBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
-            this.productoDataGridView = new System.Windows.Forms.DataGridView();
+            this.listadeProductosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.listadeProductosDataGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingNavigator)).BeginInit();
-            this.productoBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productoDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeProductosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeProductosBindingNavigator)).BeginInit();
+            this.listadeProductosBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeProductosDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // productoBindingSource
+            // listadeProductosBindingSource
             // 
-            this.productoBindingSource.DataSource = typeof(QuieroPizza.BL.Producto);
+            this.listadeProductosBindingSource.DataSource = typeof(QuieroPizza.BL.Producto);
             // 
-            // productoBindingNavigator
+            // listadeProductosBindingNavigator
             // 
-            this.productoBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.productoBindingNavigator.BindingSource = this.productoBindingSource;
-            this.productoBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.productoBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.productoBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.productoBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.listadeProductosBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.listadeProductosBindingNavigator.BindingSource = this.listadeProductosBindingSource;
+            this.listadeProductosBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.listadeProductosBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.listadeProductosBindingNavigator.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.listadeProductosBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
             this.bindingNavigatorSeparator,
@@ -77,17 +77,42 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
-            this.productoBindingNavigatorSaveItem});
-            this.productoBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.productoBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.productoBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.productoBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.productoBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.productoBindingNavigator.Name = "productoBindingNavigator";
-            this.productoBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.productoBindingNavigator.Size = new System.Drawing.Size(729, 27);
-            this.productoBindingNavigator.TabIndex = 0;
-            this.productoBindingNavigator.Text = "bindingNavigator1";
+            this.listadeProductosBindingNavigatorSaveItem});
+            this.listadeProductosBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.listadeProductosBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.listadeProductosBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.listadeProductosBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.listadeProductosBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.listadeProductosBindingNavigator.Name = "listadeProductosBindingNavigator";
+            this.listadeProductosBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.listadeProductosBindingNavigator.Size = new System.Drawing.Size(558, 27);
+            this.listadeProductosBindingNavigator.TabIndex = 0;
+            this.listadeProductosBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -121,16 +146,9 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Posición actual";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de elementos";
-            // 
             // bindingNavigatorSeparator1
             // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
             this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 27);
             // 
             // bindingNavigatorMoveNextItem
@@ -153,50 +171,32 @@
             // 
             // bindingNavigatorSeparator2
             // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
             // 
-            // bindingNavigatorAddNewItem
+            // listadeProductosBindingNavigatorSaveItem
             // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorAddNewItem.Text = "Agregar nuevo";
+            this.listadeProductosBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.listadeProductosBindingNavigatorSaveItem.Enabled = false;
+            this.listadeProductosBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("listadeProductosBindingNavigatorSaveItem.Image")));
+            this.listadeProductosBindingNavigatorSaveItem.Name = "listadeProductosBindingNavigatorSaveItem";
+            this.listadeProductosBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
+            this.listadeProductosBindingNavigatorSaveItem.Text = "Guardar datos";
             // 
-            // bindingNavigatorDeleteItem
+            // listadeProductosDataGridView
             // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(24, 24);
-            this.bindingNavigatorDeleteItem.Text = "Eliminar";
-            // 
-            // productoBindingNavigatorSaveItem
-            // 
-            this.productoBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.productoBindingNavigatorSaveItem.Enabled = false;
-            this.productoBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("productoBindingNavigatorSaveItem.Image")));
-            this.productoBindingNavigatorSaveItem.Name = "productoBindingNavigatorSaveItem";
-            this.productoBindingNavigatorSaveItem.Size = new System.Drawing.Size(24, 24);
-            this.productoBindingNavigatorSaveItem.Text = "Guardar datos";
-            // 
-            // productoDataGridView
-            // 
-            this.productoDataGridView.AutoGenerateColumns = false;
-            this.productoDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.productoDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.listadeProductosDataGridView.AutoGenerateColumns = false;
+            this.listadeProductosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.listadeProductosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
-            this.productoDataGridView.DataSource = this.productoBindingSource;
-            this.productoDataGridView.Location = new System.Drawing.Point(12, 48);
-            this.productoDataGridView.Name = "productoDataGridView";
-            this.productoDataGridView.RowTemplate.Height = 24;
-            this.productoDataGridView.Size = new System.Drawing.Size(477, 225);
-            this.productoDataGridView.TabIndex = 1;
+            this.listadeProductosDataGridView.DataSource = this.listadeProductosBindingSource;
+            this.listadeProductosDataGridView.Location = new System.Drawing.Point(12, 45);
+            this.listadeProductosDataGridView.Name = "listadeProductosDataGridView";
+            this.listadeProductosDataGridView.RowTemplate.Height = 24;
+            this.listadeProductosDataGridView.Size = new System.Drawing.Size(512, 298);
+            this.listadeProductosDataGridView.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -216,20 +216,20 @@
             this.dataGridViewTextBoxColumn3.HeaderText = "Precio";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // frmProductos
+            // frm_productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 491);
-            this.Controls.Add(this.productoDataGridView);
-            this.Controls.Add(this.productoBindingNavigator);
-            this.Name = "frmProductos";
+            this.ClientSize = new System.Drawing.Size(558, 355);
+            this.Controls.Add(this.listadeProductosDataGridView);
+            this.Controls.Add(this.listadeProductosBindingNavigator);
+            this.Name = "frm_productos";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productoBindingNavigator)).EndInit();
-            this.productoBindingNavigator.ResumeLayout(false);
-            this.productoBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productoDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeProductosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeProductosBindingNavigator)).EndInit();
+            this.listadeProductosBindingNavigator.ResumeLayout(false);
+            this.listadeProductosBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.listadeProductosDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,8 +237,8 @@
 
         #endregion
 
-        private System.Windows.Forms.BindingSource productoBindingSource;
-        private System.Windows.Forms.BindingNavigator productoBindingNavigator;
+        private System.Windows.Forms.BindingSource listadeProductosBindingSource;
+        private System.Windows.Forms.BindingNavigator listadeProductosBindingNavigator;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -250,8 +250,8 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton productoBindingNavigatorSaveItem;
-        private System.Windows.Forms.DataGridView productoDataGridView;
+        private System.Windows.Forms.ToolStripButton listadeProductosBindingNavigatorSaveItem;
+        private System.Windows.Forms.DataGridView listadeProductosDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
