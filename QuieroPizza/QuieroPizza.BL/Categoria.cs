@@ -6,16 +6,9 @@ using System.Threading.Tasks;
 
 namespace QuieroPizza.BL
 {
-    public class Producto
+    public class Categoria
     {
-        public Producto()
-        {
-            Activo = true;
-        }
         public int Id { get; set; }
         public string Descripcion { get; set; }
-        public double Precio { get; set; }
-        public Categoria Categoria { get; set; }
-        public Boolean Activo { get; set; }
     }
 }
