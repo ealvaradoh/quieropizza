@@ -1,0 +1,23 @@
+﻿@model List<QuieroPizza.BL.Categoria>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Categorias</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Codigo</th>
+            <th>Descripcion</th>
+        </tr>
+    </thead>
+    @foreach (var categoria in Model)
+    {
+        <tr>
+            <td>@categoria.Id</td>
+            <td>@categoria.Descripcion</td>
+        </tr>
+    }
+</table>

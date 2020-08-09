@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,10 +17,12 @@ namespace QuieroPizza.BL
             ListadeProductos = new List<Producto>();
         }
 
-        // Lógica del sistema
+        // Lógica en el sistema
         public List<Producto> ObtenerProductos()
         {
-            ListadeProductos = _contexto.Productos.ToList();
+            ListadeProductos = _contexto.Productos
+                .Include("Categoria")
+                .ToList();
             return ListadeProductos;
         }
 

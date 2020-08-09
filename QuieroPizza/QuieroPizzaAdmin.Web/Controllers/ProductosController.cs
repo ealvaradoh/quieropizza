@@ -5,15 +5,17 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace QuieroPizzaAdmin.Web.Controllers
+namespace QuieroPizzaAdmin.Web.Admin.Controllers
 {
     public class ProductosController : Controller
     {
 
         ProductosBL _productosBL;
+        CategoriasBL _categoriasBL;
         public ProductosController()
         {
             _productosBL = new ProductosBL();
+            _categoriasBL = new CategoriasBL();
         }
         // GET: Productos
         public ActionResult Index()
@@ -26,6 +28,11 @@ namespace QuieroPizzaAdmin.Web.Controllers
         public ActionResult Crear()
         {
             var nuevoProducto = new Producto();
+            var categorias = _categoriasBL.ObtenerCategorias();
+
+            ViewBag.ListaCategorias = 
+                new SelectList(categorias, "Id", "Descripcion");
+
             return View(nuevoProducto);
         }
         [HttpPost]
@@ -38,7 +45,11 @@ namespace QuieroPizzaAdmin.Web.Controllers
         // EDITAR UN PRODUCTO
         public ActionResult Editar(int id)
         {
-            _productosBL.ObtenerProducto(id);
+            var producto = _productosBL.ObtenerProducto(id);
+            var categorias = _categoriasBL.ObtenerCategorias();
+
+            ViewBag.CategoriaId =
+                 new SelectList(categorias, "Id", "Descripcion", producto.CategoriaId);
             return View();
         }
         [HttpPost]

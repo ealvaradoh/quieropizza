@@ -1,6 +1,4 @@
 ﻿@model List<QuieroPizza.BL.Producto>
-
-@{
     ViewBag.Title = "Index";
 }
 
@@ -14,12 +12,12 @@
             <th>Precio</th>
         </tr>
     </thead>
-    @foreach (var producto in Model)
-    {
-        <tr>
-            <td>@producto.Id</td>
-            <td>@producto.Descripcion</td>
-            <td>@producto.Precio</td>
-        </tr>
-    }
+        @foreach (var producto in Model)
+        {
+            <tr>
+                <td>@producto.Id</td>
+                <td>@producto.Descripcion</td>
+                <td>@producto.Precio</td>
+            </tr>
+        }
 </table>

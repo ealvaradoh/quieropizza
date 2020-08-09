@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuieroPizza.Web", "QuieroPizza.Web\QuieroPizza.Web.csproj", "{53191848-1950-4C05-8F11-3E9453967963}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuieroPizzaAdmin.Web", "QuieroPizzaAdmin.Web\QuieroPizzaAdmin.Web.csproj", "{F7638DCD-3FDF-4A2B-8FA8-FF1D83847288}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuieroPizza.Web.Admin", "QuieroPizzaAdmin.Web\QuieroPizza.Web.Admin.csproj", "{F7638DCD-3FDF-4A2B-8FA8-FF1D83847288}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuieroPizza.BL", "QuieroPizza.BL\QuieroPizza.BL.csproj", "{2CB9FC3E-4F2D-4C43-B5C8-0A0084790005}"
 EndProject
