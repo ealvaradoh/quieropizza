@@ -31,15 +31,24 @@ namespace QuieroPizzaAdmin.Web.Controllers
         [HttpPost]
         public ActionResult Crear(Categoria categoria)
         {
-            _categoriasBL.GuardarCategoria(categoria);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                if (categoria.Descripcion != categoria.Descripcion.Trim())
+                {
+                    ModelState.AddModelError("Descripcion", "Evite espacios antes o después de la categoría");
+                    return View(categoria);
+                }
+                _categoriasBL.GuardarCategoria(categoria);
+                return RedirectToAction("Index");
+            }
+            return View(categoria);
         }
 
         // EDITAR UNA CATEGORIA
         public ActionResult Editar(int id)
         {
-            _categoriasBL.ObtenerCategoria(id);
-            return View();
+            var categoria = _categoriasBL.ObtenerCategoria(id);
+            return View(categoria);
         }
         [HttpPost]
         public ActionResult Editar(Categoria categoria)

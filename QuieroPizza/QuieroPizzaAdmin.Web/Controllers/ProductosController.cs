@@ -36,10 +36,32 @@ namespace QuieroPizzaAdmin.Web.Admin.Controllers
             return View(nuevoProducto);
         }
         [HttpPost]
-        public ActionResult Crear(Producto producto)
+        public ActionResult Crear(Producto producto, HttpPostedFileBase imagen)
         {
-            _productosBL.GuardarProducto(producto);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                if (producto.CategoriaId == 0)
+                {
+                    ModelState.AddModelError("CategoriaId", "Ingrese una categoría");
+
+                    var categoriasingrese = _categoriasBL.ObtenerCategorias();
+                    ViewBag.CategoriaId =
+                        new SelectList(categoriasingrese, "Id", "Descripcion");
+                    return View(producto);
+                }
+
+                if (imagen != null)
+                {
+                    producto.UrlImagen = GuardarImagen(imagen);
+                }
+                _productosBL.GuardarProducto(producto);
+                return RedirectToAction("Index");
+            }
+
+            var categorias = _categoriasBL.ObtenerCategorias();
+            ViewBag.CategoriaId =
+                new SelectList(categorias, "Id", "Descripcion");
+            return View(producto);
         }
 
         // EDITAR UN PRODUCTO
@@ -50,19 +72,42 @@ namespace QuieroPizzaAdmin.Web.Admin.Controllers
 
             ViewBag.CategoriaId =
                  new SelectList(categorias, "Id", "Descripcion", producto.CategoriaId);
-            return View();
+            return View(producto);
         }
         [HttpPost]
-        public ActionResult Editar(Producto producto)
+        public ActionResult Editar(Producto producto, HttpPostedFileBase imagen)
         {
-            _productosBL.GuardarProducto(producto);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+
+                if (producto.CategoriaId == 0)
+                {
+                    ModelState.AddModelError("CategoriaId", "Seleccione una categoria");
+                    return View(producto);
+                }
+
+                if (imagen != null)
+                {
+                    producto.UrlImagen = GuardarImagen(imagen);
+                }
+
+                _productosBL.GuardarProducto(producto);
+                return RedirectToAction("Index");
+            }
+
+            var categorias = _categoriasBL.ObtenerCategorias();
+
+            ViewBag.CategoriaId =
+                new SelectList(categorias, "Id", "Descripcion");
+
+            return View(producto);
         }
 
         // Detalle
         public ActionResult Detalle(int id)
         {
             var producto = _productosBL.ObtenerProducto(id);
+            var categoria = _categoriasBL.ObtenerCategorias();
             return View(producto);
         }
 
@@ -77,6 +122,15 @@ namespace QuieroPizzaAdmin.Web.Admin.Controllers
         {
             _productosBL.EliminarProducto(producto.Id);
             return RedirectToAction("Index");
+        }
+
+        //Guardar una imagen
+        private string GuardarImagen(HttpPostedFileBase imagen)
+        {
+            string path = Server.MapPath("~/Imagenes/" + imagen.FileName);
+            imagen.SaveAs(path);
+
+            return "/Imagenes/" + imagen.FileName;
         }
     }
 }
