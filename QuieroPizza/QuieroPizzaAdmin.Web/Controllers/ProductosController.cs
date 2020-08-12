@@ -107,7 +107,6 @@ namespace QuieroPizzaAdmin.Web.Admin.Controllers
         public ActionResult Detalle(int id)
         {
             var producto = _productosBL.ObtenerProducto(id);
-            var categoria = _categoriasBL.ObtenerCategorias();
             return View(producto);
         }
 

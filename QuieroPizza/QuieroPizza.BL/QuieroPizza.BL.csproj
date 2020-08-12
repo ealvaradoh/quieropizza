@@ -54,6 +54,8 @@
   <ItemGroup>
     <Compile Include="Categoria.cs" />
     <Compile Include="CategoriasBL.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="ClientesBL.cs" />
     <Compile Include="Contexto.cs" />
     <Compile Include="Producto.cs" />
     <Compile Include="ProductosBL.cs" />

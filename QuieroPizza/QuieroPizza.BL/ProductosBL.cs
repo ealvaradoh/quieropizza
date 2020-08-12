@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,13 +22,16 @@ namespace QuieroPizza.BL
         {
             ListadeProductos = _contexto.Productos
                 .Include("Categoria")
+                .OrderBy(r => r.Categoria.Descripcion)
+                .ThenBy(r => r.Descripcion)
                 .ToList();
             return ListadeProductos;
         }
 
         public Producto ObtenerProducto(int id)
         {
-            var producto = _contexto.Productos.Find(id);
+            var producto = _contexto.Productos
+                .Include("Categoria").FirstOrDefault(p => p.Id == id);
             return producto;
         }
         
