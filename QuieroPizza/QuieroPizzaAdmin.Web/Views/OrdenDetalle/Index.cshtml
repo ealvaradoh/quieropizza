@@ -1,0 +1,49 @@
+﻿@model QuieroPizza.BL.Orden
+
+@{
+    ViewBag.Title = "Detalle de la orden";
+}
+
+<h2>Detalle de la orden @Model.Id</h2>
+
+<p>
+    @Html.ActionLink("Agregar producto", "Agregar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Producto
+        </th>
+        <th>
+            Cantidad
+        </th>
+        <th>
+            Precio
+        </th>
+        <th>
+            Total
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.ListadeOrdenDetalle) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Producto.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cantidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Precio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Total)
+        </td>
+        <td>
+            @Html.ActionLink("Eliminar", "Eliminar", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

@@ -23,6 +23,7 @@ namespace QuieroPizzaAdmin.Web.Controllers
             return View(listadeOrdenes);
         }
 
+        // CREAR UNA ORDEN
         public ActionResult Crear()
         {
             var nuevaOrden = new Orden();
@@ -52,6 +53,41 @@ namespace QuieroPizzaAdmin.Web.Controllers
                 new SelectList(clientes, "Id", "Nombre");
 
             return View(orden);         
+        }
+
+        // EDITAR UNA ORDEN
+        public ActionResult Editar(int id)
+        {
+            var orden = _ordenesBL.ObtenerOrden(id);
+            var clientes = _clientesBL.ObtenerClientes();
+
+            ViewBag.ClienteId =
+                new SelectList(clientes, "Id", "Nombre", orden.Id);
+
+            return View(orden);
+        }
+        [HttpPost]
+        public ActionResult Editar(Orden orden)
+        {
+            if (ModelState.IsValid)
+            {
+                _ordenesBL.GuardarOrden(orden);
+                return RedirectToAction("Index");
+            }
+
+            var clientes = _clientesBL.ObtenerClientes();
+
+            ViewBag.ClienteId =
+                new SelectList(clientes, "Id", "Nombre", orden.Id);
+
+            return View(orden);
+        }
+
+        // DETALLES DE UNA ORDEN
+        public ActionResult Detalle(int id)
+        {
+            var orden = _ordenesBL.ObtenerOrden(id);
+            return View(orden);
         }
     }
 }

@@ -21,6 +21,8 @@ namespace QuieroPizza.BL
         {
             Activo = true;
             Fecha = DateTime.Now;
+
+            ListadeOrdenDetalle = new List<OrdenDetalle>();
         }
     }
 

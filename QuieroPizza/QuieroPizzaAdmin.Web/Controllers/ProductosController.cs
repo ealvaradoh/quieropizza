@@ -83,11 +83,13 @@ namespace QuieroPizzaAdmin.Web.Admin.Controllers
                 if (producto.CategoriaId == 0)
                 {
                     ModelState.AddModelError("CategoriaId", "Seleccione una categoria");
+                    
                     return View(producto);
                 }
 
                 if (imagen != null)
                 {
+
                     producto.UrlImagen = GuardarImagen(imagen);
                 }
 
